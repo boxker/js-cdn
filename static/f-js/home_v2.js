@@ -161,6 +161,12 @@ $(document).ready(function () {
             }
         }
     });
+    $("#go").click(function () {
+        var q = $("#in").val();
+        if (q != "") {
+            location.href = url + q;
+        }
+    });
     getImg();
     getTop();
     Begin();

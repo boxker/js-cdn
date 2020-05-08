@@ -27,7 +27,7 @@ $(document).ready(function () {
             $(".f-m-top").removeClass("col-5");
             $(".f-m-top").addClass("col-8");
             // $("#logo").removeClass("btn-lg");
-            $("#logo").attr("style","width:100%;");
+            $("#logo").attr("style", "width:100%;");
         }
     }
     $("#query").keyup(function (event) {
@@ -35,10 +35,18 @@ $(document).ready(function () {
             var q = $("#query").val();
             if (q != "") {
                 location.href = "/so?q=" + q + "&p=1";
-            }else{
+            } else {
                 location.href = "/";
             }
         }
     });
-    DealMobile();
+    $("#go").click(function () {
+        var q = $("#query").val();
+        if (q != "") {
+            location.href = "/so?q=" + q + "&p=1";
+        } else {
+            location.href = "/";
+        }
+    });
+    // DealMobile();
 });
